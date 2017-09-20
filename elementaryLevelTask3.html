@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="solve.js"></script>
+  <script>
+    function solution(){
+    document.getElementById("result").innerHTML=solve(document.getElementById("put").value);
+    }
+  </script>
+</head>
+<body>
+  <p>Write mathematical expression there: <input id="put" type="text" placeholder="mathematical expression"></p>
+  <input type="button" onclick="solution()" value="Solve">
+  <p>Result:<span id="result"></span></p>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script>
+    var inputArray = [];
+    function putArray(){
+      for (var i=0; ;i++){
+        value = prompt("Value of element #"+(i+1)+" of first array \n (Cancel to finish fill this array)", "");
+        if (value) inputArray.push(value); else break;
+      }
+      document.write('Input array:');
+      document.write('<p>[' + inputArray.join(', ') + ']</p>');
+      document.write('<input type="button" onclick="shuffle()" value="Shuffle array">')
+      document.write('<p id="str1"></p>');
+    }
+    function shuffle(){
+      document.getElementById("str1").innerHTML = 'Result array:';
+      function compareRandom(a, b) {
+        return Math.random() - 0.5;
+      }
+      inputArray.sort(compareRandom);
+      document.write('<p>[' + inputArray.join(', ') + ']</p>');
+    }
+  </script>
+</head>
+<body onload="putArray()">
+</body>
+
+</html>

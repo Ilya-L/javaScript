@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <script>
+    var array1 = [];
+    var array2 = [];
+    var array3 = [];
+    var arraySum = [];
+    for (var i = 0; ; i++) {
+      var value = prompt('Value of element #' + (i + 1) + ' of first array \n (Cancel to finish fill this array)', '');
+      if (value) array1.push(value); else break;
+    }
+    for (i = 0; ; i++) {
+      var value = prompt('Value of element #' + (i + 1) + ' of second array \n (Cancel to finish fill this array)', '');
+      if (value) array2.push(value); else break;
+    }
+    for (i = 0; ; i++) {
+      var value = prompt('Value of element #' + (i + 1) + ' of third array \n (Cancel to finish fill this array)', '');
+      if (value) array3.push(value); else break;
+    }
+    for (i = 0; i < Math.max(array1.length, array2.length, array3.length); i++)
+      arraySum[i] = (+array1[i] || 0) + (+array2[i] || 0) + (+array3[i] || 0);
+    document.write('Input arrays:');
+    document.write('<p>[' + array1.join(', ') + ']</p>');
+    document.write('<p>[' + array2.join(', ') + ']</p>');
+    document.write('<p>[' + array3.join(', ') + ']</p>');
+    document.write('<p>Result array: </p> ');
+    document.write('<p>[' + arraySum.join(', ') + ']</p>');
+  </script>
+</body>
+</html>
